@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="FAB">
+        <attr name="bg_color" format="color|reference"/>
+        <attr name="bg_color_pressed" format="color|reference"/>
+    </declare-styleable>
+</resources>
