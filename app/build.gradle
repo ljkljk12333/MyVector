@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.imooc.vectortest"
+        applicationId "com.nightmare.jli.myvector"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1

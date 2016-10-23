@@ -1,15 +1,11 @@
-package com.imooc.vectortest;
+package com.nightmare.jli.myvector;
 
-import android.animation.Animator;
-import android.app.Activity;
 import android.graphics.drawable.Animatable;
-import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.ImageView;
 
 

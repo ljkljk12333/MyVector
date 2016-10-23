@@ -1,4 +1,4 @@
-package com.imooc.vectortest;
+package com.nightmare.jli.myvector;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

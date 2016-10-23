@@ -1,9 +1,9 @@
-package com.imooc.vectortest;
+package com.nightmare.jli.myvector;
 
 import android.content.Context;
 
 /**
- * Created by Nightmare on 2016/10/23.
+ * Created by J.Li on 2016/6/19.
  */
 
 public class DensityUtil {

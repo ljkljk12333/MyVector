@@ -1,10 +1,8 @@
-package com.imooc.vectortest;
+package com.nightmare.jli.myvector;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
@@ -15,10 +13,10 @@ import android.graphics.drawable.StateListDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.util.AttributeSet;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+
 
 /**
- * Created by J.Li on 2016/9/19.
+ * Created by J.Li on 2016/6/19.
  */
 public class CustumFAB extends ImageButton {
 
@@ -47,7 +45,7 @@ public class CustumFAB extends ImageButton {
 
     private void init(AttributeSet attrs){
         Resources.Theme theme=mContect.getTheme();
-        TypedArray array=theme.obtainStyledAttributes(attrs,R.styleable.FAB,0,0);
+        TypedArray array=theme.obtainStyledAttributes(attrs, R.styleable.FAB,0,0);
 
         try {
             setBg_Color(array.getColor(R.styleable.FAB_bg_color,Color.BLUE));

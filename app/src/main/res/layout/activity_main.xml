@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.nightmare.jli.myvector.MainActivity">
 
     <ImageView
         android:id="@+id/image"
@@ -13,7 +13,7 @@
         app:srcCompat="@drawable/vector_searchbar" />
 
 
-    <com.imooc.vectortest.CustumFAB
+    <com.nightmare.jli.myvector.CustumFAB
         android:id="@+id/btn_Add_Device"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
