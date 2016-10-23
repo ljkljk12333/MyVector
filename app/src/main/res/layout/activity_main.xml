@@ -15,8 +15,8 @@
 
     <com.imooc.vectortest.CustumFAB
         android:id="@+id/btn_Add_Device"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/vector_searcher"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

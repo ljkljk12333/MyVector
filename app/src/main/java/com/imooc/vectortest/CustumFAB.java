@@ -3,6 +3,8 @@ package com.imooc.vectortest;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
@@ -24,6 +26,7 @@ public class CustumFAB extends ImageButton {
     int bg_Color;
     int bg_Color_Pressed;
 
+    StateListDrawable sld;
     public CustumFAB(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContect=context;
@@ -51,7 +54,7 @@ public class CustumFAB extends ImageButton {
 
             setBg_Color_Pressed(array.getColor(R.styleable.FAB_bg_color_pressed,Color.GRAY));
 
-            StateListDrawable sld=new StateListDrawable();
+            sld=new StateListDrawable();
             sld.addState(new int[]{android.R.attr.state_pressed},createButton(bg_Color_Pressed));
             sld.addState(new int[]{},createButton(bg_Color));
             setBackground(sld);
@@ -70,12 +73,29 @@ public class CustumFAB extends ImageButton {
 
             setBg_Color_Pressed(Color.GRAY);
 
-            StateListDrawable sld=new StateListDrawable();
+            sld=new StateListDrawable();
             sld.addState(new int[]{android.R.attr.state_pressed},createButton(bg_Color_Pressed));
             sld.addState(new int[]{},createButton(bg_Color));
             setBackground(sld);
         }catch (Exception e){
 
+        }
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int widthSpaceSize=MeasureSpec.getSize(widthMeasureSpec);
+        int widthSpaceMode=MeasureSpec.getMode(widthMeasureSpec);
+        int heightSpaceSize=MeasureSpec.getSize(heightMeasureSpec);
+        int heightSpaceMode=MeasureSpec.getMode(heightMeasureSpec);
+
+        if(widthSpaceMode==MeasureSpec.AT_MOST&&heightSpaceMode==MeasureSpec.AT_MOST){
+            setMeasuredDimension(DensityUtil.dp2px(mContect,56),DensityUtil.dp2px(mContect,56));
+        }else if(widthSpaceMode==MeasureSpec.AT_MOST){
+            setMeasuredDimension(DensityUtil.dp2px(mContect,56),heightSpaceSize);
+        }else if(heightSpaceMode==MeasureSpec.AT_MOST) {
+            setMeasuredDimension(widthSpaceSize, DensityUtil.dp2px(mContect, 56));
         }
     }
 
